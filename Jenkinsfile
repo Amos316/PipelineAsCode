@@ -8,7 +8,7 @@ pipeline {
                      echo "PATH = ${PATH}"
                      echo "M2_HOME = ${M2_HOME}"            
                   '''
-               sh 'clean package'
+               sh 'mvn clean package'
            }
             post {
                 success {
