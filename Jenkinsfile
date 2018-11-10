@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
            steps {
                echo 'Initial build started ....'
-               sh 'clean package'
+               sh 'mvn clean package'
            }
             post {
                 success {
