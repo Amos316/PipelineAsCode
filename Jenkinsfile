@@ -6,8 +6,9 @@ pipeline {
                echo 'Initial build started ....'
                sh '''  
                     echo "PATH = ${PATH}
-                    echo "M2_HOME = ${M2_HOME}"            
-             '''
+                    echo "M2_HOME = ${M2_HOME}"  
+                              
+                  '''
                sh 'mvn clean package'
            }
             post {
