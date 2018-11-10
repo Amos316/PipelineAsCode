@@ -6,9 +6,9 @@ pipeline {
                echo 'Initial build started ....'
                sh '''  
                      echo "PATH = ${PATH}"
-                     echo "M2_HOME = /usr/local/Cellar/maven/3.6.0/libexec "            
+                     echo "M2_HOME = ${M2_HOME}"            
                   '''
-               sh 'mvn clean package'
+               sh 'clean package'
            }
             post {
                 success {
